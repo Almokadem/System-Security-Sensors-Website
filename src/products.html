@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="./output.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Sensors</title>
+    <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch  -->
+</head>
+<body class="bg-gray-900 text-white">
+    
+
+    <header class="bg-slate-900 h-16 p-5 text-white flex items-center justify-between lg:justify-around fixed w-full z-10">
+        <!-- <h1 class="text-3xl cursor-pointer">Logo</h1> -->
+        <img class="rounded-full w-12 h-12 bg-cover" src="assets/images/logo2.png" alt="logo">
+        <nav class="flex w-1/2">
+            <ul class="flex list-none w-full justify-between">
+                <a href="index.html"><li class="cursor-pointer hover:underline hover:scale-105 text-sm hidden lg:flex">Home</li></a>
+                <a href="about.html"><li class="cursor-pointer hover:underline hover:scale-105 text-sm hidden lg:flex">About</li></a>
+                <a href="products.html"><li class="cursor-pointer hover:underline hover:scale-105 text-sm hidden lg:flex">Products</li></a>
+                <a href="contact.html"><li class="cursor-pointer hover:underline hover:scale-105 text-sm hidden lg:flex">Contact</li></a>
+                <a href="faqs.html"><li class="cursor-pointer hover:underline hover:scale-105 text-sm hidden lg:flex">FAQs</li></a>
+            </ul>
+            <img id="toggleSidebar" class="w-14 cursor-pointer flex lg:hidden" src="assets/images/icons8-bars-96.png" alt="side bar">
+            
+        </nav>
+    </header>
+    <div id="sidebar" class="flex fixed z-20 min-h-screen -translate-x-full transition-all duration-200">
+        <!-- Sidebar -->
+
+        <aside class="w-64 bg-gray-900 z-30 text-white flex flex-col">
+            <!-- Header -->
+            <div class="py-6 px-4 text-center border-b border-gray-700">
+                <img class="rounded-full w-16 h-16 bg-cover" src="assets/images/logo2.png" alt="logo">
+            </div>
+    
+            <!-- Navigation Links -->
+            <nav class="mt-6 flex-1">
+                <ul class="space-y-2 px-4">
+                <!-- Home -->
+                <li>
+                    <a href="index.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        Home
+                    </a>
+                </li>
+                <!-- About -->
+                <li>
+                    <a href="about.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        About
+                    </a>
+                </li>
+                <!-- Products -->
+                <li>
+                    <a href="products.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        Products
+                    </a>
+                </li>
+                <!-- Contact -->
+                <li>
+                    <a href="contact.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        Contact
+                    </a>
+                </li>
+                <!-- FAQs -->
+                <li>
+                    <a href="faqs.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+            </nav>
+        </aside>
+        <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-10"></div>
+    </div><!-- End sidebar -->
+
+<!-- Hero Section -->
+<section class="bg-indigo-700 py-24 text-center">
+    <h1 class="text-4xl sm:text-6xl font-bold">Our Cutting-Edge Security Products</h1>
+    <p class="mt-4 text-lg sm:text-xl text-gray-200">Innovative solutions to protect what matters most.</p>
+</section>
+
+<!-- Product Grid Section -->
+<section class="container mx-auto px-6 py-12">
+    <h2 class="text-3xl font-semibold text-center text-indigo-500 mb-12">Explore Our Products</h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Product 1: Intelligent Security Sensor -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="assets/images/show.webp" alt="Intelligent Security Sensor" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-2xl font-semibold text-indigo-500">Intelligent Security Sensor</h3>
+        <p class="mt-2 text-gray-300">A state-of-the-art sensor that monitors and detects threats in real-time.</p>
+        <a href="#product1" class="text-indigo-500 hover:underline mt-4 block">Learn More</a>
+    </div>
+
+    <!-- Product 2: AI-Powered Threat Detection -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="assets/images/ai sensor.webp" alt="AI-Powered Threat Detection" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-2xl font-semibold text-indigo-500">AI-Powered Threat Detection</h3>
+        <p class="mt-2 text-gray-300">Utilizes advanced AI algorithms to identify potential threats instantly.</p>
+        <a href="#product2" class="text-indigo-500 hover:underline mt-4 block">Learn More</a>
+    </div>
+
+    <!-- Product 3: Tamper-Resistant Sensor -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="assets/images/thermal sensor.webp" alt="Tamper-Resistant Sensor" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-2xl font-semibold text-indigo-500">Tamper-Resistant Sensor</h3>
+        <p class="mt-2 text-gray-300">Designed to prevent tampering while ensuring optimal performance.</p>
+        <a href="#product3" class="text-indigo-500 hover:underline mt-4 block">Learn More</a>
+    </div>
+
+    <!-- Product 4: Wireless Security System -->
+    <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="assets/images/wireless sensor.webp" alt="Wireless Security System" class="w-full h-48 object-cover rounded-md mb-4">
+        <h3 class="text-2xl font-semibold text-indigo-500">Wireless Security System</h3>
+        <p class="mt-2 text-gray-300">A completely wireless security solution that offers seamless protection.</p>
+        <a href="#product4" class="text-indigo-500 hover:underline mt-4 block">Learn More</a>
+    </div>
+
+    </div>
+</section>
+
+<footer class="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white py-16"><!-- Footer -->
+    <div class="container mx-auto px-6 lg:px-16 text-center">
+        <!-- Header -->
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+        Ready to Secure Your World?
+        </h2>
+        <p class="text-lg md:text-xl text-gray-400 mb-8">
+        Discover advanced security solutions tailored to your needs.
+        </p>
+        <!-- Contact Details & Quick Links -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Contact Information -->
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Contact Us</h3>
+            <p class="text-gray-400">
+            <span class="block">Phone: <a href="tel:+1234567890" class="text-indigo-400 hover:text-indigo-300">+1 (234) 567-890</a></span>
+            <span class="block">Email: <a href="mailto:support@securetech.com" class="text-indigo-400 hover:text-indigo-300">support@securetech.com</a></span>
+            </p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Quick Links</h3>
+            <ul class="text-gray-400 space-y-2">
+                <li><a href="products.html" class="hover:text-indigo-300">Product Overview</a></li>
+                <li><a href="contact.html" class="hover:text-indigo-300">Support</a></li>
+                <li><a href="about.html" class="hover:text-indigo-300">About Us</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</footer><!-- End footer -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

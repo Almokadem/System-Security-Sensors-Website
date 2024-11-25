@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="./output.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Sensors</title>
+    <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch  -->
+</head>
+<body class="bg-gray-900 text-white">
+    
+
+    <header class="bg-slate-900 h-16 p-5 text-white flex items-center justify-between lg:justify-around fixed w-full z-10">
+        <!-- <h1 class="text-3xl cursor-pointer">Logo</h1> -->
+        <img class="rounded-full w-12 h-12 bg-cover" src="assets/images/logo2.png" alt="logo">
+        <nav class="flex w-1/2">
+            <ul class="flex list-none w-full justify-between">
+                <a href="index.html"><li class="cursor-pointer hover:underline hover:scale-105 text-sm hidden lg:flex">Home</li></a>
+                <a href="about.html"><li class="cursor-pointer hover:underline hover:scale-105 text-sm hidden lg:flex">About</li></a>
+                <a href="products.html"><li class="cursor-pointer hover:underline hover:scale-105 text-sm hidden lg:flex">Products</li></a>
+                <a href="contact.html"><li class="cursor-pointer hover:underline hover:scale-105 text-sm hidden lg:flex">Contact</li></a>
+                <a href="faqs.html"><li class="cursor-pointer hover:underline hover:scale-105 text-sm hidden lg:flex">FAQs</li></a>
+            </ul>
+            <img id="toggleSidebar" class="w-14 cursor-pointer flex lg:hidden" src="assets/images/icons8-bars-96.png" alt="side bar">
+            
+        </nav>
+    </header>
+    <div id="sidebar" class="flex fixed z-20 min-h-screen -translate-x-full transition-all duration-200">
+        <!-- Sidebar -->
+
+        <aside class="w-64 bg-gray-900 z-30 text-white flex flex-col">
+            <!-- Header -->
+            <div class="py-6 px-4 text-center border-b border-gray-700">
+                <img class="rounded-full w-16 h-16 bg-cover" src="assets/images/logo2.png" alt="logo">
+            </div>
+    
+            <!-- Navigation Links -->
+            <nav class="mt-6 flex-1">
+                <ul class="space-y-2 px-4">
+                <!-- Home -->
+                <li>
+                    <a href="index.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        Home
+                    </a>
+                </li>
+                <!-- About -->
+                <li>
+                    <a href="about.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        About
+                    </a>
+                </li>
+                <!-- Products -->
+                <li>
+                    <a href="products.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        Products
+                    </a>
+                </li>
+                <!-- Contact -->
+                <li>
+                    <a href="contact.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        Contact
+                    </a>
+                </li>
+                <!-- FAQs -->
+                <li>
+                    <a href="faqs.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+            </nav>
+        </aside>
+        <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-10"></div>
+    </div><!-- End sidebar -->
+
+<!-- Hero Section -->
+<section class="bg-indigo-700 py-24 text-center">
+    <h1 class="text-4xl sm:text-6xl font-bold">Who We Are</h1>
+    <p class="mt-4 text-lg sm:text-xl text-gray-200">Redefining Security with Innovation and Expertise</p>
+</section>
+
+<!-- Mission Statement Section -->
+<section class="container mx-auto px-6 py-12 text-center">
+    <h2 class="text-3xl font-semibold text-indigo-500 mb-6">Our Mission</h2>
+    <p class="text-lg sm:text-xl text-gray-300">
+    At [Company Name], our mission is to revolutionize security systems through cutting-edge technology, ensuring safety and peace of mind for businesses and individuals alike. We believe in creating innovative solutions that empower our clients with unparalleled security and control.
+    </p>
+</section>
+
+<!-- About Us Section -->
+<section class="bg-gray-800 py-16">
+    <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl font-semibold text-indigo-500 mb-8">About Us</h2>
+    <p class="text-lg sm:text-xl text-gray-300 mb-6">
+        Founded in [Year], we’ve been pioneers in the security industry, dedicated to providing top-tier products and services. Our team of engineers and experts works tirelessly to build the most reliable, intelligent, and future-proof security solutions. 
+    </p>
+    <p class="text-lg sm:text-xl text-gray-300">
+        With a focus on innovation and customer satisfaction, we are committed to building long-term relationships with our clients, offering cutting-edge products and solutions to keep them safe in a rapidly changing world.
+    </p>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="container mx-auto px-6 py-12 text-center">
+    <h2 class="text-3xl font-semibold text-indigo-500 mb-8">Meet Our Team</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+    <!-- Team Member 1 -->
+    <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="assets/images/customer.png" alt="Team Member 1" class="w-48 h-48 object-cover rounded-full mb-4 mx-auto">
+        <h3 class="text-2xl font-semibold text-indigo-500">John Doe</h3>
+        <p class="text-gray-300">CEO & Founder</p>
+    </div>
+
+    <!-- Team Member 2 -->
+    <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="assets/images/customer.png" alt="Team Member 2" class="w-48 h-48 object-cover rounded-full mb-4 mx-auto">
+        <h3 class="text-2xl font-semibold text-indigo-500">Jane Smith</h3>
+        <p class="text-gray-300">Chief Technology Officer</p>
+    </div>
+
+    <!-- Team Member 3 -->
+    <div class="bg-gray-700 p-6 rounded-lg shadow-lg hover:shadow-2xl transition duration-300">
+        <img src="assets/images/customer.png" alt="Team Member 3" class="w-48 h-48 object-cover rounded-full mb-4 mx-auto">
+        <h3 class="text-2xl font-semibold text-indigo-500">Sam Green</h3>
+        <p class="text-gray-300">Chief Marketing Officer</p>
+    </div>
+    </div>
+</section>
+
+<footer class="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white py-16"><!-- Footer -->
+    <div class="container mx-auto px-6 lg:px-16 text-center">
+        <!-- Header -->
+        <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+        Ready to Secure Your World?
+        </h2>
+        <p class="text-lg md:text-xl text-gray-400 mb-8">
+        Discover advanced security solutions tailored to your needs.
+        </p>
+        <!-- Contact Details & Quick Links -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- Contact Information -->
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Contact Us</h3>
+            <p class="text-gray-400">
+            <span class="block">Phone: <a href="tel:+1234567890" class="text-indigo-400 hover:text-indigo-300">+1 (234) 567-890</a></span>
+            <span class="block">Email: <a href="mailto:support@securetech.com" class="text-indigo-400 hover:text-indigo-300">support@securetech.com</a></span>
+            </p>
+        </div>
+        
+        <!-- Quick Links -->
+        <div>
+            <h3 class="text-xl font-semibold mb-3">Quick Links</h3>
+            <ul class="text-gray-400 space-y-2">
+                <li><a href="products.html" class="hover:text-indigo-300">Product Overview</a></li>
+                <li><a href="contact.html" class="hover:text-indigo-300">Support</a></li>
+                <li><a href="about.html" class="hover:text-indigo-300">About Us</a></li>
+            </ul>
+        </div>
+        </div>
+    </div>
+</footer><!-- End footer -->
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>

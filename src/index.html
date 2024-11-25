@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link href="./output.css" rel="stylesheet"> -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Sensors</title>
+    <!-- npx tailwindcss -i ./src/input.css -o ./src/output.css --watch  -->
+</head>
+<body>
+    
+
+    <header class="bg-slate-900 h-24 p-5 text-white flex items-center justify-between lg:justify-around fixed w-full z-10">
+        <!-- <h1 class="text-3xl cursor-pointer">Logo</h1> -->
+        <img class="rounded-full w-16 h-16 bg-cover" src="assets/images/logo2.png" alt="logo">
+        <nav class="flex w-1/2">
+            <ul class="flex list-none w-full justify-between">
+                <a href="index.html"><li class="cursor-pointer hover:underline hover:scale-105 text-xl hidden lg:flex">Home</li></a>
+                <a href="about.html"><li class="cursor-pointer hover:underline hover:scale-105 text-xl hidden lg:flex">About</li></a>
+                <a href="products.html"><li class="cursor-pointer hover:underline hover:scale-105 text-xl hidden lg:flex">Products</li></a>
+                <a href="contact.html"><li class="cursor-pointer hover:underline hover:scale-105 text-xl hidden lg:flex">Contact</li></a>
+                <a href="faqs.html"><li class="cursor-pointer hover:underline hover:scale-105 text-xl hidden lg:flex">FAQs</li></a>
+            </ul>
+            <img id="toggleSidebar" class="w-14 cursor-pointer flex lg:hidden" src="assets/images/icons8-bars-96.png" alt="side bar">
+            
+        </nav>
+    </header>
+    <div id="sidebar" class="flex fixed z-20 min-h-screen -translate-x-full transition-all duration-200">
+        <!-- Sidebar -->
+
+        <aside class="w-64 bg-gray-900 z-30 text-white flex flex-col">
+            <!-- Header -->
+            <div class="py-6 px-4 text-center border-b border-gray-700">
+                <img class="rounded-full w-16 h-16 bg-cover" src="assets/images/logo2.png" alt="logo">
+            </div>
+    
+            <!-- Navigation Links -->
+            <nav class="mt-6 flex-1">
+                <ul class="space-y-2 px-4">
+                <!-- Home -->
+                <li>
+                    <a href="index.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        Home
+                    </a>
+                </li>
+                <!-- About -->
+                <li>
+                    <a href="about.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        About
+                    </a>
+                </li>
+                <!-- Products -->
+                <li>
+                    <a href="products.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        Products
+                    </a>
+                </li>
+                <!-- Contact -->
+                <li>
+                    <a href="contact.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        Contact
+                    </a>
+                </li>
+                <!-- FAQs -->
+                <li>
+                    <a href="faqs.html" class="flex items-center gap-4 px-4 py-3 text-lg font-medium rounded-lg hover:bg-gray-700 transition">
+                        FAQs
+                    </a>
+                </li>
+            </ul>
+            </nav>
+        </aside>
+        <div id="overlay" class="fixed inset-0 bg-black bg-opacity-50 hidden z-10"></div>
+    </div><!-- End sidebar -->
+    <section class="hero-image text-white relative"><!-- hero section -->
+    <img class="hero-image absolute -z-10 w-full" src="assets/images/main.webp" alt="main image"><!-- hero image -->
+    <div class="flex justify-center lg:items-stretch md:justify-normal p-0 sm:p-5"><!-- float Container -->
+        <div class="float-container lg:h-auto lg:w-96 w-72 p-4 lg:m-28 flex flex-col gap-2 rounded-3xl mt-60  md:mt-40 md:ml-52 ">
+            <h2 class="text-2xl lg:text-5xl">Next-Generation Security Solutions for a Safer World</h2>
+            <p class="text-sm lg:text-xl">Innovative technologies to protect your digital and physical environments.</p>
+            <a href="#categories-section"><button class="CTA bg-blue-950 p-3 w-3/4 text-xl rounded-full lg:p-3 lg:w-3/4 lg:text-xl">Learn More</button></a>
+        </div>
+    </div><!-- End float Container -->
+    </section><!-- End hero section -->
+    <section id="categories-section" class="categories-section text-white bg-slate-950 h-auto w-full p-7"><!--Categories section-->
+        <h2 class="text-center text-3xl ">Explore Our Advanced Solutions</h2>
+        <div class="container flex lg:flex-row flex-col gap-7 justify-center justify-self-center my-12"><!--categories container-->
+            <a href="#intelligent" class="category flex transition-all bg-cover duration-500 drop-shadow-2xl lg:w-36 hover:text-white lg:text-transparent text-white items-end cursor-pointer lg:hover:w-2/4 hover:bg-cover" style="background-image: url('assets/images/intellegant.webp');">
+                <div class="text-container gap-4 bg-gradient-to-t from-black w-full p-3 flex items-end lg:pt-56"><!-- Text container -->
+                    <div class="bg-slate-950 rounded-full lg:flex text-white justify-center items-center hidden lg:px-7 lg:h-16">1</div>
+                    <div class="description overflow-hidden -translate-y-6 text-xl">AI-driven devices for real-time threat detection and seamless protection.</div>
+                </div>
+            </a>
+            <a href="#AI" class="category flex transition-all bg-cover duration-500 drop-shadow-2xl lg:w-36 hover:text-white lg:text-transparent text-white items-end cursor-pointer lg:hover:w-2/4 hover:bg-cover" style="background-image: url('assets/images/ai.webp');">
+                <div class="text-container gap-4 bg-gradient-to-t from-black w-full p-3 flex items-end lg:pt-56"><!-- Text container -->
+                    <div class="bg-slate-950 rounded-full lg:flex text-white justify-center items-center hidden lg:px-7 lg:h-16">2</div>
+                    <div class="description overflow-hidden -translate-y-6 text-xl">Durable, secure devices designed to detect and prevent unauthorized interference.</div>
+                </div>
+            </a>
+            <a href="#Tamper" class="category flex transition-all bg-cover duration-500 drop-shadow-2xl lg:w-36 hover:text-white lg:text-transparent text-white items-end cursor-pointer lg:hover:w-2/4 hover:bg-cover" style="background-image: url('assets/images/thermal.webp');">
+                <div class="text-container gap-4 bg-gradient-to-t from-black w-full p-3 flex items-end lg:pt-56"><!-- Text container -->
+                    <div class="bg-slate-950 rounded-full lg:flex text-white justify-center items-center hidden lg:px-7 lg:h-16">3</div>
+                    <div class="description overflow-hidden -translate-y-6 text-xl">Advanced AI technology for real-time threat identification and response.</div>
+                </div>
+            </a>
+            <a href="#Smart" class="category flex transition-all bg-cover duration-500 drop-shadow-2xl lg:w-36 hover:text-white lg:text-transparent text-white items-end cursor-pointer lg:hover:w-2/4 hover:bg-cover" style="background-image: url('assets/images/smart.png');">
+                <div class="text-container gap-4 bg-gradient-to-t from-black w-full p-3 flex items-end lg:pt-56"><!-- Text container -->
+                    <div class="bg-slate-950 rounded-full lg:flex text-white justify-center items-center hidden lg:px-7 lg:h-16">4</div>
+                    <div class="description overflow-hidden -translate-y-6 text-xl">Seamless, connected sensors for efficient, real-time monitoring and control.</div>
+                </div>
+            </a>
+        </div><!-- END categories container-->
+    </section><!-- END Categories section-->
+    <section class="products"><!--Products section-->
+        <h1 class="products text-white text-center text-4xl py-7">Dive deeper into each category</h1>
+        <div id="intelligent" class="flex flex-col-reverse lg:grid lg:grid-cols-2 my-14"><!-- Products container -->
+            <div class="p-7 flex flex-col justify-center gap-9"><!-- description -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">
+                    The Future of Security: <span class="text-blue-800">Intelligent Security Sensor NeuroGuard</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 mb-8">
+                    Discover cutting-edge technology with the X1 Sensor, offering unmatched accuracy in detecting motion, environmental changes, and potential threats in real time.
+                </p>
+                <div class="flex">
+                    <a href="#Technology" class="px-6 py-3 bg-blue-800 hover:bg-blue-950 text-white rounded-lg shadow-md text-lg transition-colors duration-500">
+                        Discover How It Works
+                    </a>
+                </div>
+            </div><!-- END description -->
+            <img class="rounded-3xl" src="assets/images/show.webp" alt="">
+        </div><!-- END Products container -->
+        <div id="AI" class="flex flex-col-reverse lg:grid lg:grid-cols-2 bg-gradient-to-r py-10 from-gray-900 to-gray-800"><!-- Products container -->
+            <div class="p-7 flex flex-col justify-center gap-9"><!-- description -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">Revolutionizing Security: <span class="text-green-700">AI-Powered Threat Detection SentinelAI</span></h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8">Leverage cutting-edge artificial intelligence to detect, analyze, and respond to security threats in real-time, ensuring unparalleled protection for your assets.</p>
+                <div class="flex">
+                    <a href="#Technology" class="px-6 py-3 bg-green-700 hover:bg-green-950 text-white rounded-lg shadow-lg text-lg transition-colors duration-500">Discover How It Works</a>
+                </div>
+            </div><!-- END description -->
+            <img src="assets/images/ai sensor.webp" alt="AI-Powered Threat Detection" class="rounded-3xl">
+        </div><!-- END Products container -->
+
+        <div id="Tamper" class="flex flex-col-reverse lg:grid lg:grid-cols-2 bg-gradient-to-r py-10 from-gray-900 via-black to-gray-800"><!-- Products container -->
+            <div class="p-7 flex flex-col justify-center gap-9"><!-- description -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">The Future of Security: <span class="text-red-700">Tamper-Resistant Sensors ArmorSense 360</span></h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8">Built to withstand tampering and interference, our sensors provide unparalleled durability and reliability in securing your assets.</p>
+                <div class="flex">
+                    <a href="#Technology" class="px-6 py-3 bg-red-700 hover:bg-red-950 text-white rounded-lg shadow-lg text-lg transition-colors duration-500">Discover How It Works</a>
+                </div>
+            </div><!-- END description -->
+            <img src="assets/images/thermal sensor.webp" alt="Tamper-Resistant Sensor" class="rounded-3xl">
+        </div><!-- END Products container -->
+
+        <div id="Smart" class="flex flex-col-reverse lg:grid lg:grid-cols-2 bg-gradient-to-r py-10 from-black to-blue-900 "><!-- Products container -->
+            <div class="p-7 flex flex-col justify-center gap-9"><!-- description -->
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 text-white">The Future of Security: <span class="text-cyan-500">Smart Wireless Sensors SenseLink</span></h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8">Discover the next level of connectivity and intelligence with our Smart Wireless Sensors, providing seamless security monitoring and easy installation.</p>
+                <div class="flex">
+                    <a href="#Technology" class="px-6 py-3 bg-cyan-600 hover:bg-cyan-800 text-white rounded-lg shadow-lg text-lg transition-colors duration-500">Discover How It Works</a>
+                </div>
+            </div><!-- END description -->
+            <img src="assets/images/wireless sensor.webp" alt="Smart Wireless Sensor" class="rounded-3xl">
+        </div><!-- END Products container -->
+
+    </section><!-- END products section-->
+    <section id="Technology" class="py-20 bg-gray-900 text-white"><!-- Technology section -->
+        <div class="container mx-auto px-4 text-center">
+            <!-- Section Header -->
+            <h2 class="text-4xl md:text-5xl font-bold mb-12">
+                Behind the Technology
+            </h2>
+            <!-- Content Wrapper -->
+            <div class="flex flex-col md:flex-row justify-center items-start gap-8">
+            <!-- Sensor Tabs -->
+            <div class="w-full md:w-1/4 space-y-4">
+                <div class="space-y-4">
+                <!-- Tab Buttons for Each Sensor -->
+                <button class="w-full text-left px-6 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg shadow-lg focus:outline-none" id="tab-intelligent-sensor">
+                    <h3 class="text-xl font-semibold">Intelligent Security Sensor</h3>
+                </button>
+                <button class="w-full text-left px-6 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg shadow-lg focus:outline-none" id="tab-ai-threat-detection">
+                    <h3 class="text-xl font-semibold">AI-Powered Threat Detection</h3>
+                </button>
+                <button class="w-full text-left px-6 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg shadow-lg focus:outline-none" id="tab-tamper-resistant">
+                    <h3 class="text-xl font-semibold">Tamper-Resistant Sensors</h3>
+                </button>
+                <button class="w-full text-left px-6 py-4 bg-gray-800 hover:bg-gray-700 rounded-lg shadow-lg focus:outline-none" id="tab-wireless-sensors">
+                    <h3 class="text-xl font-semibold">Wireless Sensors</h3>
+                </button>
+                </div>
+            </div>
+            <!-- Content for Selected Tab (Sensor Descriptions) -->
+            <div class="w-full md:w-3/4 space-y-8">
+                
+                <!-- Intelligent Security Sensor Tab Content -->
+                <div id="content-intelligent-sensor" class="tab-content hidden">
+                    <div class="flex flex-col items-center">
+                    <!-- Infographic: Intelligent Security Sensor -->
+                    <div class="mb-8">
+                        <img src="assets/images/show.webp" alt="Intelligent Security Sensor Infographic" class="w-full max-w-md h-auto rounded-lg shadow-lg">
+                    </div>
+                    <p class="text-lg text-gray-300 mb-4">
+                      **Intelligent Security Sensors** use advanced algorithms and machine learning to identify security threats. These sensors analyze data from the environment, including movement patterns and unusual behaviors, to detect potential threats like unauthorized access or intrusions. The system can adapt and improve its detection capabilities over time.
+                    </p>
+                    <ul class="list-disc list-inside text-left text-gray-400 space-y-2">
+                        <li>Uses AI and machine learning to analyze patterns and detect anomalies.</li>
+                        <li>Automatically adapts and improves over time.</li>
+                        <li>Integrated with other security systems for real-time threat alerts.</li>
+                    </ul>
+                    </div>
+                </div>
+        
+                <!-- AI-Powered Threat Detection Tab Content -->
+                <div id="content-ai-threat-detection" class="tab-content hidden">
+                    <div class="flex flex-col items-center">
+                    <!-- Infographic: AI-Powered Threat Detection -->
+                    <div class="mb-8">
+                        <img src="assets/images/ai sensor.webp" alt="AI-Powered Threat Detection Infographic" class="w-full max-w-md h-auto rounded-lg shadow-lg">
+                    </div>
+                    <p class="text-lg text-gray-300 mb-4">
+                      **AI-Powered Threat Detection** leverages artificial intelligence and deep learning to detect and respond to security risks in real-time. The system can analyze massive amounts of data, identifying potential threats based on patterns, behaviors, and anomalies. It can even predict threats before they happen.
+                    </p>
+                    <ul class="list-disc list-inside text-left text-gray-400 space-y-2">
+                        <li>AI processes large volumes of data to identify threats faster and more accurately.</li>
+                        <li>Predictive capabilities to anticipate and mitigate risks before they occur.</li>
+                        <li>Enhances security by minimizing false alarms and reducing human intervention.</li>
+                    </ul>
+                    </div>
+                </div>
+        
+                <!-- Tamper-Resistant Sensors Tab Content -->
+                <div id="content-tamper-resistant" class="tab-content hidden">
+                    <div class="flex flex-col items-center">
+                    <!-- Infographic: Tamper-Resistant Sensor -->
+                    <div class="mb-8">
+                        <img src="assets/images/thermal sensor.webp" alt="Tamper-Resistant Sensor Infographic" class="w-full max-w-md h-auto rounded-lg shadow-lg">
+                    </div>
+                    <p class="text-lg text-gray-300 mb-4">
+                      **Tamper-Resistant Sensors** are designed to prevent unauthorized access or manipulation. These sensors include features that trigger an alert if tampered with, such as breaking or disconnection from the main system. They are ideal for high-security environments where sensor reliability is critical.
+                    </p>
+                    <ul class="list-disc list-inside text-left text-gray-400 space-y-2">
+                        <li>Built-in tamper detection that alerts users if the sensor is moved or manipulated.</li>
+                        <li>Durable and resistant to physical damage.</li>
+                        <li>Ideal for sensitive areas or where security is a top priority.</li>
+                    </ul>
+                    </div>
+                </div>
+        
+                <!-- Wireless Sensors Tab Content -->
+                <div id="content-wireless-sensors" class="tab-content hidden">
+                    <div class="flex flex-col items-center">
+                    <!-- Infographic: Wireless Sensor -->
+                    <div class="mb-8">
+                        <img src="assets/images/wireless sensor.webp" alt="Wireless Sensor Infographic" class="w-full max-w-md h-auto rounded-lg shadow-lg">
+                    </div>
+                    <p class="text-lg text-gray-300 mb-4">
+                      **Wireless Sensors** are designed for easy installation and seamless connectivity. These sensors communicate with the central system through Wi-Fi or Bluetooth, making them ideal for both residential and commercial applications. They eliminate the need for extensive wiring and allow for greater flexibility and scalability in a security system.
+                    </p>
+                    <ul class="list-disc list-inside text-left text-gray-400 space-y-2">
+                        <li>Wireless connectivity for easy installation and maintenance.</li>
+                        <li>Uses low-power communication technologies like Wi-Fi, Zigbee, or Bluetooth.</li>
+                        <li>Scalable, with the ability to add more sensors as needed without complicated wiring.</li>
+                    </ul>
+                    </div>
+                </div>
+        
+                </div>
+            </div>
+            </div>
+    </section><!-- END Technology section -->
+    <section class="py-16 bg-gradient-to-r from-black via-gray-900 to-black text-white"><!-- Comments -->
+            <div class="container mx-auto px-6">
+                <!-- Section Header -->
+                <h2 class="text-3xl md:text-4xl font-extrabold text-center text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 mb-16">
+                Trusted by Industry Leaders
+                </h2>
+                <!-- Testimonial Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Testimonial 1 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300">
+                    <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/company1.png" alt="Company Logo" class="h-20 w-20 object-contain rounded-full">
+                    </div>
+                    <p class="text-lg text-gray-300 mb-4">
+                    “**NeuroGuard** helped us reduce breaches by 90%. The real-time alerts and proactive security measures have allowed us to stay one step ahead of potential threats.”
+                    </p>
+                    <p class="text-lg font-semibold text-indigo-400">CyberNet Solutions</p>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300">
+                    <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/company2.png" alt="Company Logo" class="h-20 w-20 object-contain rounded-full">
+                    </div>
+                    <p class="text-lg text-gray-300 mb-4">
+                    “With **SentinelAI**, we enhanced our security protocols. The intuitive interface, combined with its AI capabilities, has significantly reduced potential threats.”
+                    </p>
+                    <p class="text-lg font-semibold text-indigo-400">SecureLink Technologies</p>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300">
+                    <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/company3.png" alt="Company Logo" class="h-20 w-20 object-contain rounded-full">
+                    </div>
+                    <p class="text-lg text-gray-300 mb-4">
+                    “**ArmorSense 360** helped us avoid countless security breaches with their AI-driven alerts. We were able to prevent unauthorized access across critical infrastructure.”
+                    </p>
+                    <p class="text-lg font-semibold text-indigo-400">TechSentinel Systems</p>
+                </div>
+                
+                <!-- Testimonial 4 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300">
+                    <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/company4.png" alt="Company Logo" class="h-20 w-20 object-contain rounded-full">
+                    </div>
+                    <p class="text-lg text-gray-300 mb-4">
+                    “The **ArmorSense 360** tamper-resistant sensors allowed us to secure our physical assets and sensitive systems with peace of mind knowing our infrastructure is safe.”
+                    </p>
+                    <p class="text-lg font-semibold text-indigo-400">DataGuard Innovations</p>
+                </div>
+                
+                <!-- Testimonial 5 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300">
+                    <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/customer.png" alt="Company Logo" class="h-20 w-20 object-contain rounded-full">
+                    </div>
+                    <p class="text-lg text-gray-300 mb-4">
+                    “**SenseLink** helped us streamline our security processes, using smart sensors to catch threats before they could impact our business. We couldn’t be happier with the results.”
+                    </p>
+                    <p class="text-lg font-semibold text-indigo-400">SentinelX Security</p>
+                </div>
+                
+                <!-- Testimonial 6 -->
+                <div class="bg-gray-800 p-8 rounded-lg shadow-lg hover:bg-blue-800 transition duration-300">
+                    <div class="flex items-center justify-center mb-4">
+                    <img src="assets/images/company5.png" alt="Company Logo" class="h-20 w-20 object-contain rounded-full">
+                    </div>
+                    <p class="text-lg text-gray-300 mb-4">
+                    “Implementing **SenseLink Wireless Sensors** was a game changer for us. The wireless tech simplified deployment, and the real-time monitoring feature keeps us always in control.”
+                    </p>
+                    <p class="text-lg font-semibold text-indigo-400">SecureOps Ltd.</p>
+                </div>
+                </div>
+            </div>
+    </section><!-- END Comments -->
+    <footer class="bg-gradient-to-r from-gray-900 via-black to-gray-800 text-white py-16"><!-- Footer -->
+        <div class="container mx-auto px-6 lg:px-16 text-center">
+            <!-- Header -->
+            <h2 class="text-4xl md:text-5xl font-extrabold mb-6">
+            Ready to Secure Your World?
+            </h2>
+            <p class="text-lg md:text-xl text-gray-400 mb-8">
+            Discover advanced security solutions tailored to your needs.
+            </p>
+            <!-- Contact Details & Quick Links -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <!-- Contact Information -->
+            <div>
+                <h3 class="text-xl font-semibold mb-3">Contact Us</h3>
+                <p class="text-gray-400">
+                <span class="block">Phone: <a href="tel:+1234567890" class="text-indigo-400 hover:text-indigo-300">+1 (234) 567-890</a></span>
+                <span class="block">Email: <a href="mailto:support@securetech.com" class="text-indigo-400 hover:text-indigo-300">support@securetech.com</a></span>
+                </p>
+            </div>
+            
+            <!-- Quick Links -->
+            <div>
+                <h3 class="text-xl font-semibold mb-3">Quick Links</h3>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="products.html" class="hover:text-indigo-300">Product Overview</a></li>
+                    <li><a href="contact.html" class="hover:text-indigo-300">Support</a></li>
+                    <li><a href="about.html" class="hover:text-indigo-300">About Us</a></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </footer><!-- End footer -->
+    <script src="assets/js/main.js"></script>
+    
+</body>
+</html>
